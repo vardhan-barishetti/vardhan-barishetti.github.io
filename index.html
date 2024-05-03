@@ -3,106 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vardhan Barishetti - Portfolio </title>
+    <title>Vardhan Barishetti - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script type="text/javascript" src="script.js"></script>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Header Section-->
-    <header>
-        <div class="container">
+<header>
+    <div class="container">
+        <div class="center-container">
             <div id="photo">
-                <img src="img/vardhan.jpeg" alt="Vardhan Barishetti" style="width: 120px; height: auto; border-radius: 50%;">
-
+                <img src="img/vardhan.jpeg" alt="Vardhan Barishetti">
             </div>
             <h1>Vardhan Barishetti</h1>
-            <nav class="nav-menu">
-                <a href="#about" class="nav-btn" >About</a>
-                <a href="#education" class="nav-btn">Education</a>
-                <a href="#skills" class="nav-btn">Skills</a>
-                <a href="#work-experience" class="nav-btn">Work Experience</a>
-                <a href="#projects" class="nav-btn">Projects</a>
-                <a href="#activities" class="nav-btn">Activities</a>
-            </nav>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+        </div>
+        <!-- Social media icons -->
+        <div class="social-share">
+            <a href="https://www.linkedin.com/in/vb0808/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/vardhan-barishetti" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/" target="_blank" class="social-icon leetcode-icon">
+                <img src="img/leetcode.png" alt="LeetCode" class="icon-img">
+            </a>                   
+            <a href="https://twitter.com/intent/tweet?url=your_website_url&text=Check%20out%20this%20awesome%20website" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <!-- Add more social media buttons as needed -->
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="left-column">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!-- About section content -->
+        </section>
+        
+        <section id="education" class="timeline-section">
+            <!-- Education section content -->
+            <h2>Education</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h3>Stevens Institute of Technology</h3>
+                    <p>Details about your education...</p>
+                    <h3>2022 - 2023</h3>
+                </div>
+                <div class="timeline-item">
+                    <h3>Osmania University</h3>
+                    <p>Details about your education...</p>
+                    <h3>2016 - 20202</h3>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <canvas id="skillsChart" width="400" height="150"></canvas>
+            <p>Details about your skills...</p>
+            <!-- Skills section content -->
+        </section>
+    </div>
+    
+    <div class="right-column">
+        <section id="work-experience" class="timeline-section">
+            <!-- Work experience section content -->
+            <h2>Work Experience</h2>
+            <div class="timeline-container" id="work-experience-container">
+                <!-- Work experience items will be dynamically added here -->
+            </div>
+        </section>
+        
+        <section id="projects" class="timeline-section">
+            <!-- Projects section content -->
+            <h2>Projects</h2>
+            <div class="timeline-container" id="projects-container">
+                <!-- Projects items will be dynamically added here -->
+            </div>
+        </section>
+        
+        <section id="activities" class="timeline-section">
+            <!-- Activities section content -->
+            <h2>Activities</h2>
+            <div class="timeline-container" id="activities-container">
+                <!-- Activities items will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: example@example.com</p>
+                <p>Phone: +1234567890</p>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <!-- Add more social media icons as needed -->
             </div>
         </div>
-    </header>
-    
-    
+        <p class="name">Vardhan Barishetti &copy; 2024</p>
+    </div>
+</footer>
 
-    <!--Main Content-->
-    <main>
-        <div class="container">
-            <div class="content-wrapper">
-            <!-- About Me Section -->
-            <section id="about">
-                <h2>HI</h2>
-                <p>Introduction and brief overview...</p>
-            </section>
-            
-            <!-- Education Section -->
-            <section id="education">
-                <h2>Education</h2>
-                <ul>
-                    <li>Stevens Institute of Technology</li>
-                    <li>Osmania University</li>
-                </ul>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Programming Languages: Java, JavaScript, Python, C</li>
-                    <li>Software Engineering: React, Redux, Spring, MongoDB...</li>
-                    <li>Systems Engineering: Windows, MacOS, Linux...</li>
-                </ul>
-            </section>
-
-            <!-- Work Experience Section -->
-            <section id="work-experience">
-                <h2>Work Experience</h2>
-                <ul>
-                    <li>Java Full Stack Developer at UPS...</li>
-                    <li>Java Developer Intern at RFRIT LLC...</li>
-                    <li>Application Development Associate at Accenture...</li>
-                </ul>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>Movie Review Application</li>
-                    <li>Property Exchange Web Platform</li>
-                </ul>
-            </section>
-
-            <!-- Activities Section -->
-            <section id="activities">
-                <h2>Activities</h2>
-                <ul>
-                    <li>Orchestrated "Signal Hunt" event...</li>
-                    <li>Participated in a workshop focused on "Sensor Control Robot"...</li>
-                </ul>
-            </section>
-
-            </div>
-        </div>
-    </main>
-
-     <!-- Footer Section -->
-     <footer>
-        <div class="container">
-            <p>&copy; 2024 Vardhan Barishetti</p>
-        </div>
-    </footer>
-    
 </body>
 </html>
