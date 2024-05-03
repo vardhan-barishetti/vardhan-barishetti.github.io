@@ -20,22 +20,96 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
+    background: linear-gradient(to right, #333, #555);
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
 header h1 {
     font-size: 2em;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 header a {
     color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Photo section styles */
+#photo {
+    padding-right: 20px;
+}
+
+/* Photo section styles */
+#photo img {
+    width: 80px; /* Increase width for larger image */
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px; /* Add margin to separate image from the name */
+}
+
+/* Navigation menu button styles */
+.nav-btn {
+    background-color: #333; /* Dark gray */
+    color: #fff; /* White */
+    font-weight: bold;
+    border: 2px solid #333; /* Match the background color */
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #008080; 
+    color: #000; /* Black */
+}
+
+
+
+/* Hamburger menu button styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+    /* Other styles remain the same */
+
+    .nav-menu {
+        /* Other styles remain the same */
+    }
+
+    .nav-btn {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 /* Main Content styles */
@@ -57,4 +131,76 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Navigation menu styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ccc;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+    #photo {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
