@@ -55,6 +55,73 @@ header a:hover {
     margin-right: 20px; /* Add margin to separate image from the name */
 }
 
+/* Dark mode styles */
+.dark-mode body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode-toggle i {
+    color: #333; /* Icon color in light mode */
+}
+
+.dark-mode .dark-mode-toggle i {
+    color: #fff; /* Icon color in dark mode */
+}
+
+.dark-mode * {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+/* Dark mode styles for header */
+.dark-mode header {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header .social-icon {
+    color: #fff; /* Social icon color in dark mode */
+}
+
+/* Styles for dark mode toggle button */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+
+
 /* Adjust styles for social icons */
 .social-share {
     display: flex;

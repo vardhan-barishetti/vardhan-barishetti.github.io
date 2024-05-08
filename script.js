@@ -123,3 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    // Toggle dark mode when the button is clicked
+    darkModeToggle.addEventListener("click", function () {
+        console.log("Dark mode toggle button clicked"); // Debugging message
+        body.classList.toggle("dark-mode");
+    });
+});
